@@ -1,5 +1,14 @@
 <template>
   <div id="app">
+    <header>
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <img class="logo" src="./assets/build-a-bot-logo.png" alt="">
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <HomePage />
     </main>
