@@ -44,21 +44,18 @@ main {
 header {
   background-color: #999;
   width: 1084px;
-  min-height: 300px;
+  margin: 0 auto;
 }
-
 ul {
   padding: 3px;
   display: flex;
 }
-
 .nav-item {
   display: inline-block;
   padding: 5px 10px;
   font-size: 22px;
   border-right: 1px solid #bbb;
 }
-
 .logo {
   vertical-align: middle;
   height: 30px;
