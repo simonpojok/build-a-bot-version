@@ -59,6 +59,7 @@
 </template>
 <script>
 import availableParts from '../data/parts';
+import createdHookMixin from './created-hook-mixin';
 
 function getPreviousValidIndex(index, length) {
   const decrementedIndex = index + 1;
@@ -78,7 +79,7 @@ function getNextValidIndex(index, length) {
 
 export default {
   name: 'RobotBuilder',
-
+  mixins: [createdHookMixin],
   data() {
     return {
       availableParts,
