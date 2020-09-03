@@ -29,7 +29,7 @@ export default {
       type: String,
       required: true,
       validator(value) {
-        return ['left', 'right', 'bottom', 'top'].includes(value);
+        return ['left', 'right', 'bottom', 'top', 'center'].includes(value);
       },
     },
   },
@@ -53,6 +53,7 @@ export default {
         this.selectedPartIndex,
         this.parts.length,
       );
+      this.$emit('part-selected', this.selectedPart);
     },
 
   },
