@@ -4,15 +4,7 @@
       Add to Cart
     </button>
     <div class="top-row">
-      <div class="top part" :class="{ 'sale-border': selectedRobot.head.onSale }">
-        <div class="robot-name">
-          {{ selectedRobot.head.title }}
-          <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
-        </div>
-        <img  v-bind:src="selectedRobot.head.src" title="head"/>
-        <button v-on:click="selectPreviousHead()" class="prev-selector">&#9668;</button>
-        <button v-on:click="selectNextHead()" class="next-selector">&#9658;</button>
-      </div>
+      <PartSelector :parts="availableParts.heads"/>
     </div>
     <div class="middle-row">
       <PartSelector />
@@ -20,11 +12,7 @@
       <PartSelector />
     </div>
     <div class="bottom-row">
-      <div class="bottom part">
-        <img v-bind:src="selectedRobot.base.src" title="left arm"/>
-        <button v-on:click="selectPreviousBottomPart()" class="prev-selector">&#9668;</button>
-        <button v-on:click="selectNextBottomPart()" class="next-selector">&#9658;</button>
-      </div>
+      <PartSelector />
     </div>
     <div>
       <h1>Cart</h1>
@@ -53,7 +41,7 @@ import createdHookMixin from './created-hook-mixin';
 export default {
   name: 'RobotBuilder',
   mixins: [createdHookMixin],
-  components: [PartSelector],
+  components: { PartSelector },
   data() {
     return {
       availableParts,
