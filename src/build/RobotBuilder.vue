@@ -58,58 +58,28 @@
   </div>
 </template>
 <script>
+import PartSelector from '@/build/PartSelector';
 import availableParts from '../data/parts';
 import createdHookMixin from './created-hook-mixin';
-
-function getPreviousValidIndex(index, length) {
-  const decrementedIndex = index + 1;
-  if ((decrementedIndex < 0) || (decrementedIndex >= length)) {
-    return 0;
-  }
-  return decrementedIndex;
-}
-
-function getNextValidIndex(index, length) {
-  const incrementedIndex = index + 1;
-  if ((incrementedIndex >= length) || (incrementedIndex < 0)) {
-    return 0;
-  }
-  return incrementedIndex;
-}
 
 export default {
   name: 'RobotBuilder',
   mixins: [createdHookMixin],
+  components: [PartSelector],
   data() {
     return {
       availableParts,
-      selectedHeadIndex: 0,
-      selectedLeftArm: 0,
-      selectedCenterPart: 0,
-      selectedRightArm: 0,
-      selectBottomPart: 0,
       cart: [],
-    };
-  },
-  computed: {
-    headBorderStyle() {
-      return {
-        border: this.selectedRobot.head.onSale ? '3px solid red' : '3px solid grey',
-      };
-    },
-    selectedRobot() {
-      return {
+      selectedRobot: {
         head: { },
-        leftArm: {} ,
+        leftArm: {},
         torso: { },
         rightArm: { },
         base: { },
-      };
-    },
+      },
+    };
   },
   methods: {
-
-    },
     addToCart() {
       const robot = this.selectedRobot;
       const cost = robot.head.cost
@@ -120,6 +90,7 @@ export default {
       this.cart.push({ ...robot, cost });
     },
   },
+  computed: {},
 };
 </script>
 <style scoped>
