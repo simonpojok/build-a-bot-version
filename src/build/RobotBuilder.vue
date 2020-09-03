@@ -99,74 +99,16 @@ export default {
     },
     selectedRobot() {
       return {
-        head: availableParts.heads[this.selectedHeadIndex],
-        leftArm: availableParts.heads[this.selectedLeftArm],
-        torso: availableParts.torsos[this.selectedCenterPart],
-        rightArm: availableParts.heads[this.selectedRightArm],
-        base: availableParts.heads[this.selectBottomPart],
+        head: { },
+        leftArm: {} ,
+        torso: { },
+        rightArm: { },
+        base: { },
       };
     },
   },
   methods: {
-    selectNextHead() {
-      this.selectedHeadIndex = getNextValidIndex(
-        this.selectedHeadIndex,
-        availableParts.heads.length,
-      );
-    },
-    selectPreviousHead() {
-      this.selectedHeadIndex = getPreviousValidIndex(
-        this.selectedHeadIndex,
-        availableParts.heads.length,
-      );
-    },
-    selectPreviousLeftArm() {
-      this.selectedLeftArm = getPreviousValidIndex(
-        this.selectedLeftArm,
-        availableParts.arms.length,
-      );
-    },
-    selectNextLeftArm() {
-      this.selectedLeftArm = getNextValidIndex(
-        this.selectedLeftArm,
-        availableParts.arms.length,
-      );
-    },
-    selectPreviousCentralPart() {
-      this.selectedCenterPart = getPreviousValidIndex(
-        this.selectedCenterPart,
-        availableParts.torsos.length,
-      );
-    },
-    selectNextCentralPart() {
-      this.selectedCenterPart = getNextValidIndex(
-        this.selectedCenterPart,
-        availableParts.torsos.length,
-      );
-    },
-    selectPreviousRightArm() {
-      this.selectedRightArm = getPreviousValidIndex(
-        this.selectedRightArm,
-        availableParts.arms.length,
-      );
-    },
-    selectNextRightArm() {
-      this.selectedRightArm = getNextValidIndex(
-        this.selectedRightArm,
-        availableParts.arms.length,
-      );
-    },
-    selectPreviousBottomPart() {
-      this.selectBottomPart = getPreviousValidIndex(
-        this.selectBottomPart,
-        availableParts.bases.length,
-      );
-    },
-    selectNextBottomPart() {
-      this.selectBottomPart = getNextValidIndex(
-        this.selectBottomPart,
-        availableParts.bases.length,
-      );
+
     },
     addToCart() {
       const robot = this.selectedRobot;
