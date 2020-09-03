@@ -7,12 +7,12 @@
       <PartSelector :parts="availableParts.heads"/>
     </div>
     <div class="middle-row">
-      <PartSelector />
-      <PartSelector />
-      <PartSelector />
+      <PartSelector :parts="availableParts.arms"/>
+      <PartSelector :parts="availableParts.torsos"/>
+      <PartSelector :parts="availableParts.arms"/>
     </div>
     <div class="bottom-row">
-      <PartSelector />
+      <PartSelector :parts="availableParts.bases"/>
     </div>
     <div>
       <h1>Cart</h1>
