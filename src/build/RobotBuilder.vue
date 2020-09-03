@@ -44,7 +44,6 @@
           </tr>
         </thead>
         <tbody>
-            {{ cart }}
             <tr v-for="(robot, index) in cart" :key="index">
               <td>{{ robot.head.title }}</td>
               <td class="cost">{{ robot.head.cost }}</td>
@@ -78,7 +77,6 @@ export default {
   },
   methods: {
     addToCart() {
-      console.log('adding to art', this.selectedRobot);
       const robot = this.selectedRobot;
       const cost = robot.head.cost
       + robot.leftArm.cost
@@ -86,7 +84,6 @@ export default {
       + robot.torso.cost
       + robot.base.cost;
       this.cart.push({ ...robot, cost });
-      console.log(this.cart);
     },
   },
   computed: {},

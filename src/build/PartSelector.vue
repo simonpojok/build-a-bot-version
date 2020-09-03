@@ -36,27 +36,32 @@ export default {
   data() {
     return { selectedPartIndex: 0 };
   },
+  created() {
+    this.emitSelectedPart();
+  },
   computed: {
     selectedPart() {
       return this.parts[this.selectedPartIndex];
     },
   },
   methods: {
+    emitSelectedPart() {
+      this.$emit('part-selected', this.selectedPart);
+    },
     selectNextPart() {
       this.selectedPartIndex = getNextValidIndex(
         this.selectedPartIndex,
         this.parts.length,
       );
-      this.$emit('part-selected', this.selectedPart);
+      this.emitSelectedPart();
     },
     selectPreviousPart() {
       this.selectedPartIndex = getPreviousValidIndex(
         this.selectedPartIndex,
         this.parts.length,
       );
-      this.$emit('part-selected', this.selectedPart);
+      this.emitSelectedPart();
     },
-
   },
 };
 
