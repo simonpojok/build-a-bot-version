@@ -8,6 +8,7 @@
         &#x25B2;Expand
       </span>
     </div>
+    <slot v-if="open"></slot>
   </div>
 </template>
 
