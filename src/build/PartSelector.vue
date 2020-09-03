@@ -47,6 +47,7 @@ export default {
         this.selectedPartIndex,
         this.parts.length,
       );
+      this.$emit('part-selected', this.selectedPart);
     },
     selectPreviousPart() {
       this.selectedPartIndex = getPreviousValidIndex(
