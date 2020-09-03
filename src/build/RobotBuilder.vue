@@ -64,6 +64,16 @@ export default {
       selectBottomPart: 0,
     };
   },
+  computed: {
+    selectedRobot() {
+      return {
+        head: availableParts.heads[this.selectedHeadIndex],
+        leftArm: availableParts.heads[this.selectedLeftArm],
+        rightArm: availableParts.heads[this.selectedRightArm],
+        base: availableParts.heads[this.selectBottomPart],
+      };
+    },
+  },
   methods: {
     selectNextHead() {
       this.selectedHeadIndex = getNextValidIndex(
@@ -120,7 +130,7 @@ export default {
       );
     },
     selectNextBottomPart() {
-      this.selectBottomPart = getNextValidIndex()(
+      this.selectBottomPart = getNextValidIndex(
         this.selectBottomPart,
         availableParts.bases.length,
       );
