@@ -69,6 +69,7 @@ export default {
       selectedCenterPart: 0,
       selectedRightArm: 0,
       selectBottomPart: 0,
+      cart: [],
     };
   },
   computed: {
@@ -142,6 +143,15 @@ export default {
         this.selectBottomPart,
         availableParts.bases.length,
       );
+    },
+    addToCart() {
+      const robot = this.selectedRobot;
+      const cost = robot.head.cost
+      + robot.leftArm.cost
+      + robot.rightArm.cost
+      + robot.torso.cost
+      + robot.base.cost;
+      this.cart.push({ ...robot, cost });
     },
   },
 };
