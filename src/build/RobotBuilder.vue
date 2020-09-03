@@ -34,10 +34,14 @@
   </div>
 </template>
 <script>
+import availableParts from '../data/parts';
+
 export default {
   name: 'RobotBuilder',
   data() {
-    return {};
+    return {
+      availableParts,
+    };
   },
 };
 </script>
