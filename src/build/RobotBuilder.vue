@@ -74,11 +74,12 @@
 import PartSelector from './PartSelector.vue';
 import availableParts from '../data/parts';
 import createdHookMixin from './created-hook-mixin';
+import CollapsibleSection from '../shared/CollapsibleSection.vue';
 
 export default {
   name: 'RobotBuilder',
   mixins: [createdHookMixin],
-  components: { PartSelector },
+  components: { PartSelector, CollapsibleSection },
   data() {
     return {
       availableParts,
