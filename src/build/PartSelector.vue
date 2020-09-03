@@ -39,6 +39,9 @@ export default {
   updated() {
     this.emitSelectedPart();
   },
+  created() {
+    this.emitSelectedPart();
+  },
   computed: {
     selectedPart() {
       return this.parts[this.selectedPartIndex];
