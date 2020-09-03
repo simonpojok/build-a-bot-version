@@ -293,4 +293,7 @@ td, th {
 .cost {
   text-align: right;
 }
+.sale-border {
+  border: 3px solid red;
+}
 </style>
