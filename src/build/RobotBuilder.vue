@@ -14,9 +14,9 @@
         <button v-on:click="selectNextLeftArm()" class="next-selector">&#9660;</button>
       </div>
       <div class="center part">
-        <img v-bind:src="availableParts.torsos[0].src" title="left arm"/>
-        <button class="prev-selector">&#9668;</button>
-        <button class="next-selector">&#9658;</button>
+        <img v-bind:src="availableParts.torsos[selectedCenterPart].src" title="left arm"/>
+        <button v-on:click="selectPreviousCentralPart()" class="prev-selector">&#9668;</button>
+        <button v-on:click="selectNextCentralPart()" class="next-selector">&#9658;</button>
       </div>
       <div class="right part">
         <img v-bind:src="availableParts.arms[0].src" title="left arm"/>
@@ -59,6 +59,7 @@ export default {
       availableParts,
       selectedHeadIndex: 0,
       selectedLeftArm: 0,
+      selectedCenterPart: 0,
     };
   },
   methods: {
@@ -84,6 +85,18 @@ export default {
       this.selectedLeftArm = getNextValidIndex(
         this.selectedLeftArm,
         availableParts.arms.length,
+      );
+    },
+    selectPreviousCentralPart() {
+      this.selectedCenterPart = getPreviousValidIndex(
+        this.selectedCenterPart,
+        availableParts.torsos.length,
+      );
+    },
+    selectNextCentralPart() {
+      this.selectedCenterPart = getNextValidIndex(
+        this.selectedCenterPart,
+        availableParts.torsos.length,
       );
     },
   },
