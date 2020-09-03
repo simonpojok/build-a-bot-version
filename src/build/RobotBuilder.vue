@@ -244,4 +244,14 @@ export default {
 .sale {
   color: red;
 }
+.content {
+  position: relative;
+}
+
+.add-to-cart {
+  position: absolute;
+  right: 30px;
+  width: 220px;
+  font-size: 16px;
+}
 </style>
