@@ -4,15 +4,35 @@
       Add to Cart
     </button>
     <div class="top-row">
-      <PartSelector :parts="availableParts.heads" position="top"/>
+      <PartSelector
+        :parts="availableParts.heads"
+        position="top"
+        @part-selected="part => selectedRobot.head = part"
+      />
     </div>
     <div class="middle-row">
-      <PartSelector :parts="availableParts.arms" position="left"/>
-      <PartSelector :parts="availableParts.torsos" position="center"/>
-      <PartSelector :parts="availableParts.arms" position="right"/>
+      <PartSelector
+        :parts="availableParts.arms"
+        position="left"
+        @part-selected="part => selectedRobot.leftArm = part"
+      />
+      <PartSelector
+        :parts="availableParts.torsos"
+        position="center"
+        @part-selected="part => selectedRobot.torso = part"
+      />
+      <PartSelector
+        :parts="availableParts.arms"
+        position="right"
+        @part-selected="part => selectedRobot.rightArm = part"
+      />
     </div>
     <div class="bottom-row">
-      <PartSelector :parts="availableParts.bases" position="bottom"/>
+      <PartSelector
+        :parts="availableParts.bases"
+        position="bottom"
+        @part-selected="part => selectedRobot.base = part"
+      />
     </div>
     <div>
       <h1>Cart</h1>
