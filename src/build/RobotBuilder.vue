@@ -15,21 +15,9 @@
       </div>
     </div>
     <div class="middle-row">
-      <div class="left part">
-        <img v-bind:src="selectedRobot.leftArm.src" title="left arm"/>
-        <button v-on:click="selectPreviousLeftArm()" class="prev-selector">&#9650;</button>
-        <button v-on:click="selectNextLeftArm()" class="next-selector">&#9660;</button>
-      </div>
-      <div class="center part">
-        <img v-bind:src="selectedRobot.torso.src" title="left arm"/>
-        <button v-on:click="selectPreviousCentralPart()" class="prev-selector">&#9668;</button>
-        <button v-on:click="selectNextCentralPart()" class="next-selector">&#9658;</button>
-      </div>
-      <div class="right part">
-        <img v-bind:src="selectedRobot.rightArm.src" title="left arm"/>
-        <button v-on:click="selectPreviousRightArm()" class="prev-selector">&#9650;</button>
-        <button v-on:click="selectNextRightArm()" class="next-selector">&#9660;</button>
-      </div>
+      <PartSelector />
+      <PartSelector />
+      <PartSelector />
     </div>
     <div class="bottom-row">
       <div class="bottom part">
@@ -58,7 +46,7 @@
   </div>
 </template>
 <script>
-import PartSelector from '@/build/PartSelector';
+import PartSelector from './PartSelector.vue';
 import availableParts from '../data/parts';
 import createdHookMixin from './created-hook-mixin';
 
