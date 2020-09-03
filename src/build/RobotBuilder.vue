@@ -3,7 +3,7 @@
     <div class="top-row">
       <div class="top part">
         <img  v-bind:src="availableParts.heads[selectedHeadIndex].src" title="head"/>
-        <button class="prev-selector">&#9668;</button>
+        <button v-on:click="selectPreviousHead()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextHead()" class="next-selector">&#9658;</button>
       </div>
     </div>
@@ -36,6 +36,22 @@
 <script>
 import availableParts from '../data/parts';
 
+function getPreviousValidIndex(index, length) {
+  const decrementedIndex = index + 1;
+  if ((decrementedIndex < 0) || (decrementedIndex >= length)) {
+    return 0;
+  }
+  return decrementedIndex;
+}
+
+function getNextValidIndex(index, length) {
+  const incrementedIndex = index + 1;
+  if ((incrementedIndex >= length) || (incrementedIndex < 0)) {
+    return 0;
+  }
+  return incrementedIndex;
+}
+
 export default {
   name: 'RobotBuilder',
   data() {
@@ -46,7 +62,16 @@ export default {
   },
   methods: {
     selectNextHead() {
-      this.selectedHeadIndex += 1;
+      this.selectedHeadIndex = getNextValidIndex(
+        this.selectedHeadIndex,
+        availableParts.heads.length,
+      );
+    },
+    selectPreviousHead() {
+      this.selectedHeadIndex = getPreviousValidIndex(
+        this.selectedHeadIndex,
+        availableParts.heads.length,
+      );
     },
   },
 };
