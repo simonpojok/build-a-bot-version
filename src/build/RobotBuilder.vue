@@ -14,10 +14,10 @@
           <img :src="selectedRobot.base.src"/>
         </div>
       </div>
+      <button class="add-to-cart" @click="addToCart()">
+        Add to Cart
+      </button>
     </div>
-    <button class="add-to-cart" @click="addToCart()">
-      Add to Cart
-    </button>
     <div class="top-row">
       <PartSelector
         :parts="availableParts.heads"
@@ -208,8 +208,7 @@ export default {
 
 .add-to-cart {
   position: absolute;
-  right: 30px;
-  width: 220px;
+  width: 210px;
   font-size: 16px;
 }
 td, th {
