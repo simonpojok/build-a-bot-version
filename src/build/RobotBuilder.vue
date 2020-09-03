@@ -2,31 +2,31 @@
   <div>
     <div class="top-row">
       <div class="top part">
-        <img  v-bind:src="availableParts.heads[selectedHeadIndex].src" title="head"/>
+        <img  v-bind:src="selectedRobot.head.src" title="head"/>
         <button v-on:click="selectPreviousHead()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextHead()" class="next-selector">&#9658;</button>
       </div>
     </div>
     <div class="middle-row">
       <div class="left part">
-        <img v-bind:src="availableParts.arms[selectedLeftArm].src" title="left arm"/>
+        <img v-bind:src="selectedRobot.leftArm.src" title="left arm"/>
         <button v-on:click="selectPreviousLeftArm()" class="prev-selector">&#9650;</button>
         <button v-on:click="selectNextLeftArm()" class="next-selector">&#9660;</button>
       </div>
       <div class="center part">
-        <img v-bind:src="availableParts.torsos[selectedCenterPart].src" title="left arm"/>
+        <img v-bind:src="selectedRobot.torso.src" title="left arm"/>
         <button v-on:click="selectPreviousCentralPart()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextCentralPart()" class="next-selector">&#9658;</button>
       </div>
       <div class="right part">
-        <img v-bind:src="availableParts.arms[selectedRightArm].src" title="left arm"/>
+        <img v-bind:src="selectedRobot.rightArm.src" title="left arm"/>
         <button v-on:click="selectPreviousRightArm()" class="prev-selector">&#9650;</button>
         <button v-on:click="selectNextRightArm()" class="next-selector">&#9660;</button>
       </div>
     </div>
     <div class="bottom-row">
       <div class="bottom part">
-        <img v-bind:src="availableParts.bases[selectBottomPart].src" title="left arm"/>
+        <img v-bind:src="selectedRobot.base.src" title="left arm"/>
         <button v-on:click="selectPreviousBottomPart()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextBottomPart()" class="next-selector">&#9658;</button>
       </div>
@@ -69,6 +69,7 @@ export default {
       return {
         head: availableParts.heads[this.selectedHeadIndex],
         leftArm: availableParts.heads[this.selectedLeftArm],
+        torso: availableParts.torsos[this.selectedCenterPart],
         rightArm: availableParts.heads[this.selectedRightArm],
         base: availableParts.heads[this.selectBottomPart],
       };
