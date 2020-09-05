@@ -50,7 +50,7 @@ export default {
   methods: {
     showPartInfo() {
       this.$router.push({
-        name: 'Parts',
+        name: 'Part',
         params: { id: this.selectedPart.id, partType: this.selectedPart.type },
       });
     },
