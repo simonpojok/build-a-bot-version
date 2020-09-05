@@ -77,6 +77,7 @@ export default {
   width:165px;
   height:165px;
   border: 3px solid #aaa;
+  cursor: pointer;
 }
 .sale {
   position: absolute;
