@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../home/HomePage.vue';
 import RobotBuilder from '../build/RobotBuilder.vue';
 
