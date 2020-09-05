@@ -8,6 +8,9 @@
               <img class="logo" src="./assets/build-a-bot-logo.png" alt="">
               Build-a-Bot
             </router-link>
+            <router-link class="nav-link" :to="{name: 'Build'}">
+              Build
+            </router-link>
           </li>
         </ul>
       </nav>
