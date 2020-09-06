@@ -5,6 +5,9 @@ import BrowsePart from '@/parts/BrowsePart.vue';
 import HomePage from '../home/HomePage.vue';
 import RobotBuilder from '../build/RobotBuilder.vue';
 import RobotHeads from '@/parts/RobotHeads';
+import RobotArms from '@/parts/RobotArms';
+import RobotBases from '@/parts/RobotBases';
+import RobotTorsos from '@/parts/RobotTorsos';
 
 Vue.use(Router);
 export default new Router({
@@ -20,7 +23,22 @@ export default new Router({
           name: 'BrowseHead',
           path: 'heads',
           component: RobotHeads,
-        }
+        },
+        {
+          name: 'BrowseArm',
+          path: 'arms',
+          component: RobotArms,
+        },
+        {
+          name: 'BrowseBase',
+          path: 'bases',
+          component: RobotBases,
+        },
+        {
+          name: 'BrowseTorso',
+          path: 'torsos',
+          component: RobotTorsos,
+        },
       ],
     },
     {
