@@ -59,7 +59,14 @@ export default new Router({
       ],
     },
     {
-      path: '/parts/:partTySpe/:id', name: 'Part', component: PartInfo, props: true,
+      path: '/parts/:partTySpe/:id',
+      name: 'Part',
+      component: PartInfo,
+      props: true,
+      beforeEnter(to, from, next) {
+        const isValidId = Number.isInteger(Number(to.params.id));
+        next(isValidId);
+      },
     },
   ],
 });
