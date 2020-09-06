@@ -2,12 +2,12 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import PartInfo from '@/parts/PartInfo.vue';
 import BrowsePart from '@/parts/BrowsePart.vue';
-import HomePage from '../home/HomePage.vue';
+import RobotHeads from '@/parts/RobotHeads.vue';
+import RobotArms from '@/parts/RobotArms.vue';
+import RobotBases from '@/parts/RobotBases.vue';
+import RobotTorsos from '@/parts/RobotTorsos.vue';
 import RobotBuilder from '../build/RobotBuilder.vue';
-import RobotHeads from '@/parts/RobotHeads';
-import RobotArms from '@/parts/RobotArms';
-import RobotBases from '@/parts/RobotBases';
-import RobotTorsos from '@/parts/RobotTorsos';
+import HomePage from '../home/HomePage.vue';
 
 Vue.use(Router);
 export default new Router({
