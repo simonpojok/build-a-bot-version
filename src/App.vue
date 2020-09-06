@@ -17,6 +17,9 @@
         </ul>
       </nav>
     </header>
+    <div class="container">
+      <aside class="aside"></aside>
+    </div>
     <main>
       <router-view></router-view>
     </main>
@@ -68,8 +71,18 @@ ul {
   text-decoration: none;
   color: inherit;
 }
-
 .router-link-active {
   color: white;
+}
+.container {
+  display: flex;
+  margin: 10px auto 0 auto;
+  justify-content: center;
+}
+.aside {
+  padding: 30px;
+  background-color: gray;
+  width: 100px;
+  min-height: 300px;
 }
 </style>
