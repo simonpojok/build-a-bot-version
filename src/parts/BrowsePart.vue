@@ -7,6 +7,7 @@
       <li>Torsos</li>
       <li>Bases</li>
     </ul>
+    <router-view></router-view>
   </div>
 </template>
 
