@@ -20,10 +20,16 @@ export default new Router({
       components: {
         default: HomePage,
         sidebar: SidebarStandard,
-        build: SidebarBuild,
       },
     },
-    { path: '/build', name: 'Build', component: RobotBuilder },
+    {
+      path: '/build',
+      name: 'Build',
+      components: {
+        default: RobotBuilder,
+        sidebar: SidebarBuild,
+      },
+    },
     {
       path: '/parts/browse',
       name: 'BrowseParts',
