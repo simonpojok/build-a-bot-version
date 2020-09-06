@@ -18,7 +18,9 @@
       </nav>
     </header>
     <div class="container">
-      <aside class="aside"></aside>
+      <aside class="aside">
+        <router-view name="sidebar"></router-view>
+      </aside>
     </div>
     <main>
       <router-view></router-view>
@@ -41,16 +43,15 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 main {
-  margin: 0 auto;
   padding: 30px;
   background-color: white;
-  width: 1024px;
+  width: 964px;
   min-height: 300px;
 }
 
 header {
   background-color: #999;
-  width: 1084px;
+  width: 1184px;
   margin: 0 auto;
 }
 ul {
