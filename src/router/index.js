@@ -20,22 +20,22 @@ export default new Router({
       component: BrowsePart,
       children: [
         {
-          name: 'BrowseHead',
+          name: 'BrowseHeads',
           path: 'heads',
           component: RobotHeads,
         },
         {
-          name: 'BrowseArm',
+          name: 'BrowseArms',
           path: 'arms',
           component: RobotArms,
         },
         {
-          name: 'BrowseBase',
+          name: 'BrowseBases',
           path: 'bases',
           component: RobotBases,
         },
         {
-          name: 'BrowseTorso',
+          name: 'BrowseTorsos',
           path: 'torsos',
           component: RobotTorsos,
         },
