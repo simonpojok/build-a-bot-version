@@ -7,10 +7,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     cart: [],
+    parts: null,
   },
   mutations: {
     addRobotToCart(state, robot) {
       state.cart.push(robot);
+    },
+    updateParts(state, parts) {
+      state.parts = parts;
     },
   },
   getters: {
@@ -20,7 +24,7 @@ export default new Vuex.Store({
   },
   actions: {
     getParts({commit}) {
-      axios.get('/api/parts')
+      axios.get('/api/parts');
     },
   },
 });
