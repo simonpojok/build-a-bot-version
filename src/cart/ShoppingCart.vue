@@ -37,7 +37,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr v-for="(robot, index) in cart" :key="index">
+      <tr v-for="(robot, index) in cartSaleItems" :key="index">
         <td class="robot-title">
           {{robot.head.title}}
         </td>
@@ -58,6 +58,7 @@ export default {
       console.log(this.$store);
       return this.$store.state.cart;
     },
+    cartSaleItems() {},
   },
 };
 </script>
