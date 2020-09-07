@@ -9,7 +9,6 @@ export default new Vuex.Store({
   },
   mutations: {
     addRobotToCart(state, robot) {
-      console.log(state, robot);
       state.cart.push(robot);
     },
   },
