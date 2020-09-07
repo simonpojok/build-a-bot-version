@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import axios from 'axios';
 
 Vue.use(Vuex);
 
@@ -19,7 +20,7 @@ export default new Vuex.Store({
   },
   actions: {
     getParts({commit}) {
-
+      axios.get('/api/parts')
     },
   },
 });
