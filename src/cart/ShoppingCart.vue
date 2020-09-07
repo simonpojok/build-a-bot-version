@@ -30,7 +30,8 @@
 export default {
   name: 'Cart',
   computed: {
-    carts() {
+    cart() {
+      console.log(this.$store);
       return this.$store.state.cart;
     },
   },

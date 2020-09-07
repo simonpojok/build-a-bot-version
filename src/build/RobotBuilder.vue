@@ -93,7 +93,7 @@ export default {
     return {
       availableParts,
       addedToCart: false,
-      cart: [],
+      cart: this.$store.state.cart,
       selectedRobot: {
         head: { },
         leftArm: {},
@@ -111,6 +111,7 @@ export default {
       + robot.rightArm.cost
       + robot.torso.cost
       + robot.base.cost;
+      console.log('adding to cart');
       this.$store.commit('addRobotToCart', { ...robot, cost });
       this.addedToCart = true;
     },
