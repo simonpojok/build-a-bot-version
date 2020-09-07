@@ -29,6 +29,11 @@
 <script>
 export default {
   name: 'Cart',
+  computed: {
+    carts() {
+      return this.$store.state.cart;
+    },
+  },
 };
 </script>
 
