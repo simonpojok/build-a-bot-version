@@ -14,6 +14,11 @@
               Build
             </router-link>
           </li>
+          <li class="nav-item cart">
+            <router-link class="nav-link" to="/cart" exact>
+              Cart
+            </router-link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -57,6 +62,11 @@ header {
 ul {
   padding: 3px;
   display: flex;
+}
+.nav-item.cart {
+  position: relative;
+  margin-left: auto;
+  border-right: none;
 }
 .nav-item {
   display: inline-block;
