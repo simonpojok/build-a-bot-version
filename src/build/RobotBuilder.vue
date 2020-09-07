@@ -55,7 +55,6 @@
 </template>
 <script>
 import PartSelector from './PartSelector.vue';
-import availableParts from '../data/parts';
 import createdHookMixin from './created-hook-mixin';
 import CollapsibleSection from '../shared/CollapsibleSection.vue';
 
@@ -72,9 +71,11 @@ export default {
   },
   mixins: [createdHookMixin],
   components: { PartSelector, CollapsibleSection },
+  created() {
+    this.$store.dispatch('getParts');
+  },
   data() {
     return {
-      availableParts,
       addedToCart: false,
       cart: this.$store.state.cart,
       selectedRobot: {
@@ -99,7 +100,11 @@ export default {
       this.addedToCart = true;
     },
   },
-  computed: {},
+  computed: {
+    availableParts() {
+      return this.$store.state.parts;
+    },
+  },
 };
 </script>
 <style scoped>
