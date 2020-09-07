@@ -8,6 +8,7 @@ import RobotBases from '@/parts/RobotBases.vue';
 import RobotTorsos from '@/parts/RobotTorsos.vue';
 import SidebarStandard from '@/sidebar/SidebarStandard.vue';
 import SidebarBuild from '@/sidebar/SidebarBuild.vue';
+import ShoppingCart from '@/cart/ShoppingCart.vue';
 import RobotBuilder from '../build/RobotBuilder.vue';
 import HomePage from '../home/HomePage.vue';
 
@@ -69,6 +70,11 @@ export default new Router({
           next(true);
         }
       },
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: ShoppingCart,
     },
   ],
 });
