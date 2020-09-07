@@ -7,10 +7,11 @@
   </div>
 </template>
 <script>
-import parts from '@/data/parts';
+import getPartsMixin from './get-parts-mixin';
 
 export default {
   name: 'PartInfo',
+  mixins: [getPartsMixin],
   props: {
     partType: { type: String },
     id: { type: [Number, String] },
