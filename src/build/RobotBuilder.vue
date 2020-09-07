@@ -77,7 +77,7 @@ export default {
   data() {
     return {
       addedToCart: false,
-      cart: this.$store.state.cart,
+      cart: this.$store.state.robots.cart,
       selectedRobot: {
         head: { },
         leftArm: {},
@@ -105,7 +105,7 @@ export default {
   },
   computed: {
     availableParts() {
-      return this.$store.state.parts;
+      return this.$store.state.robots.parts;
     },
   },
 };
