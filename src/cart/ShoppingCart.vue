@@ -24,7 +24,7 @@
       </tbody>
     </table>
 <!--    duplicate -->
-    <h1>Cart</h1>
+    <h1 class="saleItems">You saved money on these robots: </h1>
     <table>
       <thead>
       <tr>
@@ -72,5 +72,10 @@ export default {
   }
   .cost {
     text-align: right;
+  }
+  .saleItems {
+    margin-top: 50px;
+    font-size: 18px;
+    color: red;
   }
 </style>
