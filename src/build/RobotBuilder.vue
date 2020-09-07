@@ -96,7 +96,7 @@ export default {
       + robot.torso.cost
       + robot.base.cost;
       console.log('adding to cart');
-      this.$store.commit('addRobotToCart', { ...robot, cost });
+      this.$store.dispatch('addRobotToCart', { ...robot, cost });
       this.addedToCart = true;
     },
   },
