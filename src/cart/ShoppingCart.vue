@@ -58,7 +58,9 @@ export default {
       console.log(this.$store);
       return this.$store.state.cart;
     },
-    cartSaleItems() {},
+    cartSaleItems() {
+      return this.$store.getters.cartSaleItems;
+    },
   },
 };
 </script>
