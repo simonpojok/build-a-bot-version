@@ -24,7 +24,9 @@ export default new Vuex.Store({
   },
   actions: {
     getParts({commit}) {
-      axios.get('/api/parts');
+      axios.get('/api/parts')
+        .then((results) => commit('updateParts', results.data))
+        .catch(console.error);
     },
   },
 });
