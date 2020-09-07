@@ -23,7 +23,7 @@
       </aside>
     </div>
     <main>
-      <router-view></router-view>
+      <router-view name="default"></router-view>
     </main>
   </div>
 </template>
