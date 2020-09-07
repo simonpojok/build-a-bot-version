@@ -17,4 +17,9 @@ export default new Vuex.Store({
       return state.cart.filter((item) => item.head.onSale);
     },
   },
+  actions: {
+    getParts({commit}) {
+
+    },
+  },
 });
