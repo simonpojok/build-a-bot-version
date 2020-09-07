@@ -34,4 +34,7 @@ export default new Vuex.Store({
         .then(() => commit('addRobotToCart', robot));
     },
   },
+  modules: {
+
+  },
 });
