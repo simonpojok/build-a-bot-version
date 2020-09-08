@@ -14,13 +14,13 @@ export default {
   update: (element, binding) => {
     applyStyle(element, binding);
   },
-  inserted: () => {
-    console.log('componentUpdated');
-  },
-  componentUpdated: () => {
-    console.log('componentUpdated');
-  },
-  unbind: () => {
-    console.log('unbind');
-  },
+  // inserted: () => {
+  //   console.log('componentUpdated');
+  // },
+  // componentUpdated: () => {
+  //   console.log('componentUpdated');
+  // },
+  // unbind: () => {
+  //   console.log('unbind');
+  // },
 };
