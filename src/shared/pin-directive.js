@@ -1,9 +1,10 @@
 export default {
   bind: (element, binding) => {
-    if (binding.arg !== 'position') return;
-    Object.keys(binding.modifiers).forEach((key) => {
+    console.log(binding);
+    Object.keys(binding.values).forEach((key) => {
       // eslint-disable-next-line no-param-reassign
-      element.style[key] = '5px';
+      console.log(key);
+      // element.style[key] = '5px';
     });
     // eslint-disable-next-line no-param-reassign
     element.style.position = 'absolute';
