@@ -45,6 +45,9 @@ export default {
       return this.$store.state.robots.cart;
     },
   },
+  created() {
+    console.log(process.env.VUE_APP_TEST);
+  },
 };
 </script>
 
