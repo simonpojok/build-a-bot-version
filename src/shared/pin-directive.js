@@ -1,5 +1,6 @@
 export default {
-  bind: (element) => {
+  bind: (element, binding) => {
+    console.log(binding);
     // eslint-disable-next-line no-param-reassign
     element.style.position = 'absolute';
     // eslint-disable-next-line no-param-reassign
