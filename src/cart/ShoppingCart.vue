@@ -51,14 +51,11 @@
 </template>
 
 <script>
-import currencyFilter from '../shared/currency-filter';
 
 export default {
   name: 'Cart',
   directives: {},
-  filters: {
-    currency: currencyFilter,
-  },
+  filters: {},
   computed: {
     cart() {
       return this.$store.state.robots.cart;
