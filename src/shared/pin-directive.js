@@ -1,7 +1,7 @@
 export default {
   bind: (element, binding) => {
     if (binding.arg !== 'position') return;
-    Object.keys(binding.modifier).forEach((key) => {
+    Object.keys(binding.modifiers).forEach((key) => {
       // eslint-disable-next-line no-param-reassign
       element.style[key] = '5px';
     });
