@@ -1,4 +1,14 @@
 <template>
+  <header>
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <img class="logo" src="./assets/build-a-bot-logo.png" alt="Logo"/>
+          Build-a-Bot
+        </li>
+      </ul>
+    </nav>
+  </header>
   <main id="app">
     <HomePage />
   </main>
@@ -21,12 +31,31 @@ body {
 }
 main {
   margin: 0 auto;
-  padding: 30px;
+  padding: 30px 0;
   background-color: white;
-  width: 1024px;
+  width: 1084px;
   min-height: 300px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+header {
+  background-color: #999;
+  width: 1084px;
+  margin: 0 auto;
+}
+ul {
+  padding: 3px;
+  display: flex;
+}
+.nav-item {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 22px;
+  border-right: 1px solid #bbb;
+}
+.logo {
+  vertical-align: middle;
+  height: 30px;
 }
 </style>
