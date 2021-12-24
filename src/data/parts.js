@@ -1,3 +1,4 @@
+/* eslint-disable */
 const images = require.context("./images", true, /\.png$/);
 
 const parts = {
