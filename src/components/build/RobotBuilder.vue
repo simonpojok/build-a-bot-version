@@ -58,6 +58,7 @@
 
 <script>
 import availableParts from '../../data/parts';
+import lifecycleHookMixins from './lifecycle-hook-mixins';
 
 const getPreviousValidIndex = (index, length) => {
   const deprecatedIndex = index - 1;
@@ -82,7 +83,9 @@ export default {
       cart: [],
     };
   },
-  created() { console.log('Created'); },
+  mixins: [
+    lifecycleHookMixins,
+  ],
   computed: {
     selectedRobot() {
       return {
