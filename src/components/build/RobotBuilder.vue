@@ -2,10 +2,10 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
     <div class="top-row">
-      <div class="top part">
+      <div :class="[saleBorderClass, 'top', 'part']">
         <div class="robot-name">
           {{ selectedRobot.head.title }}
-          <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
+          <span v-if="[selectedRobot.head.onSale]" class="sale">Sale!</span>
         </div>
         <img :src="selectedRobot.head.src" title="head"/>
         <button @click="selectNextHead()" class="prev-selector">&#9668;</button>
@@ -82,6 +82,7 @@ export default {
       cart: [],
     };
   },
+  created() { console.log('Created'); },
   computed: {
     selectedRobot() {
       return {
@@ -91,6 +92,14 @@ export default {
         toros: this.availableParts.torsos[this.selectedTorsoIndex],
         base: this.availableParts.bases[this.selectedBaseIndex],
       };
+    },
+    headBorderStyle() {
+      return {
+        border: this.selectedRobot.head.onSale ? '3px solid red' : '3px sold grey',
+      };
+    },
+    saleBorderClass() {
+      return this.selectedRobot.head.onSale ? 'sale-board' : '';
     },
   },
   methods: {
@@ -297,11 +306,15 @@ export default {
 
 td, th {
   text-align: left;
-  padding: 5px 20px 5px 5px;
+  padding: 5px 20px 5px 20px;
 }
 
 .cost {
   text-align: right;
+}
+
+.sale-border {
+  border: 3px solid red;
 }
 
 </style>
