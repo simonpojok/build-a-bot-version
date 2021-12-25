@@ -1,5 +1,5 @@
 import { ref, onMounted } from 'vue';
-import parts from '../data/parts';
+import parts from '../../data/parts';
 
 const allParts = [...parts.heads, ...parts.arms, ...parts.torsos, ...parts.bases];
 
