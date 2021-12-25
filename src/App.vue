@@ -32,6 +32,9 @@ export default {
 body {
   background: linear-gradient(to bottom, #555, #999) fixed;
 }
+</style>
+
+<style scoped>
 main {
   margin: 0 auto;
   padding: 30px 0;
